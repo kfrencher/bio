@@ -1,43 +1,56 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 
 const projects = [
   {
-    title: "ALFA Compiler",
-    description: "A Node.js-based compiler for ALFA (Abbreviated Language for Authorization) policy files. Leverages the ALFA language server to provide REST endpoints for compiling ALFA policies to XACML.",
-    tech: ["TypeScript", "Node.js", "Language Server Protocol", "XACML"],
-    github: "https://github.com/kfrencher/alfa-compiler",
-    type: "Tool"
+    title: 'ServiceNow Data Migrator',
+    description:
+      'A ServiceNow application that facilitates data migration between instances, ensuring data integrity and consistency across environments.',
+    tech: ['JavaScript', 'ServiceNow'],
+    github: 'https://github.com/kfrencher/servicenow-klf-global-fluent/blob/main/KLF_RecordImporter.md',
+    type: 'Tool',
   },
   {
-    title: "ServiceNow KLF Global",
-    description: "Script includes that execute in the global scope. These are utilities used across applications with detailed documentation inside each script include.",
-    tech: ["JavaScript", "ServiceNow", "Groovy"],
-    github: "https://github.com/kfrencher/servicenow-klf-global",
-    type: "Library"
+    title: 'ALFA Compiler',
+    description:
+      'A Node.js-based compiler for ALFA (Abbreviated Language for Authorization) policy files. Leverages the ALFA language server to provide REST endpoints for compiling ALFA policies to XACML.',
+    tech: ['TypeScript', 'Node.js', 'Language Server Protocol', 'XACML'],
+    github: 'https://github.com/kfrencher/alfa-compiler',
+    type: 'Tool',
   },
   {
-    title: "ServiceNow UI Script Loader Component",
-    description: "A UI Builder Component that allows UI Scripts to be loaded dynamically, enhancing modularity and performance in ServiceNow applications.",
-    tech: ["JavaScript", "ServiceNow", "UI Builder"],
-    github: "https://github.com/kfrencher/servicenow-cmp-klf-ui-script-loader",
-    type: "Component"
+    title: 'ServiceNow KLF Global',
+    description:
+      'Script includes that execute in the global scope. These are utilities used across applications with detailed documentation inside each script include.',
+    tech: ['JavaScript', 'ServiceNow', 'Groovy'],
+    github: 'https://github.com/kfrencher/servicenow-klf-global-fluent',
+    type: 'Library',
   },
   {
-    title: "ServiceNow KLF Utilities",
-    description: "General script includes used across projects. Includes brief and detailed descriptions of each utility for enterprise ServiceNow development.",
-    tech: ["JavaScript", "ServiceNow"],
-    github: "https://github.com/kfrencher/servicenow-klf",
-    type: "Library"
+    title: 'ServiceNow UI Script Loader Component',
+    description:
+      'A UI Builder Component that allows UI Scripts to be loaded dynamically, enhancing modularity and performance in ServiceNow applications.',
+    tech: ['JavaScript', 'ServiceNow', 'UI Builder'],
+    github: 'https://github.com/kfrencher/servicenow-cmp-klf-ui-script-loader',
+    type: 'Component',
   },
   {
-    title: "ServiceNow VS Code Starter",
-    description: "VS Code configuration for ServiceNow Extension. Configures visibility of files and folders for optimal development workflow with ServiceNow projects.",
-    tech: ["JavaScript", "VS Code", "ServiceNow"],
-    github: "https://github.com/kfrencher/servicenow-now-vscode-starter",
-    type: "Tool"
-  }
+    title: 'ServiceNow KLF Utilities',
+    description:
+      'General script includes used across projects. Includes brief and detailed descriptions of each utility for enterprise ServiceNow development.',
+    tech: ['JavaScript', 'ServiceNow'],
+    github: 'https://github.com/kfrencher/servicenow-klf-common',
+    type: 'Library',
+  },
+  {
+    title: 'ServiceNow VS Code Starter',
+    description:
+      'VS Code configuration for ServiceNow Extension. Configures visibility of files and folders for optimal development workflow with ServiceNow projects.',
+    tech: ['JavaScript', 'VS Code', 'ServiceNow'],
+    github: 'https://github.com/kfrencher/servicenow-now-vscode-starter',
+    type: 'Tool',
+  },
 ];
 ---
 
@@ -48,22 +61,20 @@ const projects = [
       <p class="text-xl text-gray-600 mb-12">
         A collection of open-source projects and tools I've built, primarily focused on ServiceNow platform development.
       </p>
-      
+
       <div class="grid md:grid-cols-2 gap-8">
-        {projects.map(project => (
-          <ProjectCard {...project} />
-        ))}
+        {projects.map((project) => <ProjectCard {...project} />)}
       </div>
 
       <div class="mt-16 bg-white p-8 rounded-lg shadow-md">
         <h2 class="text-2xl font-bold mb-4 text-gray-900">More Projects</h2>
         <p class="text-gray-700 mb-4">
-          You can find more of my work and contributions on my GitHub profile. I regularly contribute to 
-          open-source projects and maintain various utilities for enterprise development.
+          You can find more of my work and contributions on my GitHub profile. I regularly contribute to open-source
+          projects and maintain various utilities for enterprise development.
         </p>
-        <a 
-          href="https://github.com/kfrencher" 
-          target="_blank" 
+        <a
+          href="https://github.com/kfrencher"
+          target="_blank"
           rel="noopener noreferrer"
           class="inline-block px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
         >
